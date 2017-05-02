@@ -1,11 +1,22 @@
 #!/usr/bin/python
 # coding=utf8
 
+import enum
 import logging
 
 from inspect import currentframe, getframeinfo
 from time import strftime, sleep
 from termcolor import colored
+
+
+class LogLevel(enum.IntEnum):
+    none = 0
+    crit = 1
+    fail = 2
+    warn = 3
+    info = 4
+    ok = 5
+
 
 def ct():
     return strftime('%Y-%m-%d %H:%M:%S')
